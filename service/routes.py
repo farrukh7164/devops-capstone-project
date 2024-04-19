@@ -14,7 +14,6 @@ from . import app  # Import Flask application
 # Health Endpoint
 ############################################################
 @app.route("/health")
-
 def health():
     """Health Status"""
     return jsonify(dict(status="OK")), status.HTTP_200_OK
@@ -24,7 +23,6 @@ def health():
 # GET INDEX
 ######################################################################
 @app.route("/")
-
 def index():
     """Root URL response"""
     return (
@@ -41,7 +39,6 @@ def index():
 # CREATE A NEW ACCOUNT
 ######################################################################
 @app.route("/accounts", methods=["POST"])
-
 def create_accounts():
     """
     Creates an Account
